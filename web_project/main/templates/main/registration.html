@@ -1,0 +1,51 @@
+{%load static%}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css'%}">
+    <link rel="stylesheet" href ="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+
+    <style>
+        a
+        {
+            display: block;
+            float: right;
+            margin-right: 25px;
+            padding: 10px 50px;
+            color: black;
+
+            border-radius: 15px;
+            border: 1px solid black;
+            text-decoration: none;
+            transition: color 0.5s ,background 0.5s;
+        }
+        a:hover
+        {
+            color: white;
+            background: yellow;
+            border: 1px solid yellow;
+        }
+    </style>
+
+ </head>
+{%if user.is_authenticated %}
+    <a href="logout">Выйти ({{user.username}})</a>
+{%else%}
+    <a href="register">Регистрация на сайте</a>
+    <a href="login">Авторизация</a>
+{% endif %}
+<body>
+    <main>
+        {% block text %}
+
+        {% endblock %}
+    </main>
+</body>
+</html>
