@@ -19,29 +19,42 @@
             float: right;
             margin-right: 25px;
             padding: 10px 50px;
-            color: black;
+            color: white;
 
             border-radius: 15px;
-            border: 1px solid black;
+            border: 1px solid white;
             text-decoration: none;
-            transition: color 0.5s ,background 0.5s;
+            transition: color	rgb(72,0,0) ,background 	rgb(72,0,0);
         }
         a:hover
         {
-            color: white;
-            background: yellow;
-            border: 1px solid yellow;
+            color: black;
+            background: white;
+            border: 1px solid white;
+        }
+        body {
+               background-image: url(img/logo.jpg);
         }
     </style>
 
  </head>
 {%if user.is_authenticated %}
-    <a href="logout">Выйти ({{user.username}})</a>
+<a href="logout">Выход ({{user.username}})</a>
 {%else%}
-    <a href="register">Регистрация на сайте</a>
-    <a href="login">Авторизация</a>
+<a href="register">Регистрация на сайте</a>
+<a href="login">Авторизация</a>
 {% endif %}
 <body>
+    <aside>
+        <img src="{% static 'main/img/logo1.jpg' %}" alt="Фон"> 
+        <span class="logo"></span>
+        <h3>Навигация</h3>
+        <ul>
+            <a href="{% url 'AnimeHome' %}"><li><i class="fas fa-home"></i> Главная страница</li></a>
+            <a href="{% url 'Genres' %}"><li><i class="fab fa-accessible-icon"></i></i> Жанры</li></a>
+            <a href="{% url 'Games' %}"><li><i class="fas fa-dungeon"></i> Игры</li></a>
+        </ul>
+    </aside>
     <main>
         {% block text %}
 

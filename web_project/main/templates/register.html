@@ -1,0 +1,22 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Регистрация</title>
+        <link rel="stylesheet" href="{% static 'main/css/register.css'%}">
+  </head>
+  <body>
+    <form class="register" action="" method="post">
+      <h1 title="Форма регистрации на сайте">Регистрация</h1>
+      <div class= "group">
+        <label for "">Адрес электронной почты</label>
+        <input type ="email">
+      </div>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <div class ="group">
+      <button type="submit">Зарегистрироваться</button>
+      </div>
+    </form>
+  </body>
+</html>

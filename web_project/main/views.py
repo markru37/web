@@ -5,11 +5,13 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib.auth import logout
-from main.models import Human
+from .models import Human
 from django.views.generic.base import View
 from django.http import HttpResponseRedirect
-from django.core.mail import send_mail, BadHeaderError
-from django import forms
+
+
+
+
 
 
 def index(request):
@@ -57,7 +59,7 @@ def get(self, request):
 
 class RegisterFormView(FormView):
     form_class = UserCreationForm
-    success_url = "/login/"
+    success_url = "/"
     template_name = "register.html"
 
     def form_valid(self, form):
@@ -80,3 +82,4 @@ class LogoutFormView(View):
     def get(self, request):
         logout(request)
         return HttpResponseRedirect("/")
+
