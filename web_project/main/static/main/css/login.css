@@ -1,14 +1,12 @@
 .form-1 {
     font-family: 'Ubuntu', 'Lato', sans-serif;
     font-weight: 400;
-    /* Size and position */
     width: 300px;
     position: relative;
     margin: 60px auto 30px;
     padding: 10px;
     overflow: hidden;
- 
-    /* Styles */
+
     background: hsl(0, 0%, 41%);
     border-radius: 0.4em;
     border: 1px solid rgb(33, 34, 33);
@@ -17,12 +15,9 @@
         0 16px 10px -8px rgba(0, 0, 0, 0.6);
 }
 .form1- label {
-    /* Size and position */
     width: 50%;
     float: left;
     padding-top: 9px;
- 
-    /* Styles */
     color: #ddd;
     font-size: 12px;
     text-transform: uppercase;
@@ -35,21 +30,16 @@
  
 .form-1 input[type=text],
 .form-1 input[type=password] {
-    /* Size and position */
     width: 50%;
     float: left;
     padding: 8px 5px;
     margin-bottom: 10px;
     font-size: 12px;
- 
-    /* Styles */
     background: linear-gradient(hsl(69, 82%, 51%), hsl(76, 91%, 56%));  
     border: 1px solid #ffee00;
     box-shadow:
         0 1px 0 rgba(255,255,255,0.1);
     border-radius: 3px;
- 
-    /* Font styles */
     font-family: 'Ubuntu', 'Lato', sans-serif;
     color: #fff;
  
@@ -67,7 +57,7 @@
     box-shadow: inset 0 0 2px #ffd000;
     background: #494d54;
     border-color: #294e58;
-    outline: none; /* Remove Chrome outline */
+    outline: none;
 }
 .form-1 p:nth-child(3),
 .form-1 p:nth-child(4) {
@@ -90,12 +80,10 @@
     vertical-align: middle;
 }
 .form-1 input[type=submit] {
-    /* Width and position */
     width: 100%;
     padding: 8px 5px;
    
-    /* Styles */
-    border: 1px solid #475b6e; /* Fallback */
+    border: 1px solid #475b6e; 
     border: 1px solid #000000;
     box-shadow:
         inset 0 1px 0 #0a0a03cc,
@@ -104,7 +92,6 @@
     background: #3f4244;
     cursor:pointer;
    
-    /* Font styles */
     font-family: 'Ubuntu', 'Lato', sans-serif;
     color: white;
     font-weight: 700;
@@ -119,30 +106,24 @@
 .form-1 input[type=submit]:active {
     background: #686869;
     box-shadow: inset 0 0 3px #000000;
-    border-color: #0f1401; /* Fallback */
+    border-color: #0f1401;
     border-color: #0a0c01e6;
 }
  
 .no-boxshadow .form-1 input[type=submit]:hover {
     background: #424547;
 }
-/* Gradient line */
 .form-1:after {
-    /* Size and position */
     content: "";
     height: 1px;
     width: 33%;
     position: absolute;
     left: 20%;
     top: 0;
- 
-    /* Styles */
     background: linear-gradient(left, transparent, #a19494, #b6b6b8, #ccb1b1, transparent);
 }
- 
-/* Small flash */
+
 .form-1:before {
-    /* Size and position */
     content: "";
     width: 8px;
     height: 5px;
@@ -150,12 +131,10 @@
     left: 34%;
     top: -7px;
      
-    /* Styles */
     border-radius: 50%;
     box-shadow: 0 0 6px 4px #fff;
 }
 .form-1 p:nth-child(1):before{
-    /* Size and position */
     content: "";
     width: 250px;
     height: 100px;
@@ -163,7 +142,6 @@
     top: 0;
     left: 45px;
  
-    /* Styles */
     transform: rotate(75deg);
     background: linear-gradient(50deg, rgba(231, 16, 16, 0.15), #e21212de);
     pointer-events: none;
